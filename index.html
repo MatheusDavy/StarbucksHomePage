@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Starbucks Home</title>
+</head>
+
+<body>
+
+    <div class="circulo"></div>
+
+    <header>
+        <a href="#" class="logo"><img src="imagem/logo.png"></a>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+
+
+    <section>
+        <div class="conteudo">
+            <div class="container-text">
+                <h2>Não é apenas café<br>É <span>Starbucks</span></h2>
+                <p>Starbucks é uma empresa multinacional norte-americana, com a maior cadeia de
+                    cafeterias do mundo. Tem sua sede na cidade de Seattle, estado de Washington.</p>
+                <a href="#">Ver Mais</a>
+            </div>
+
+            <div class="produtos-imagem">
+                <img src="imagem/img1.png" class="produto">
+            </div>
+        </div>
+
+        <ul class="escolha-produtos">
+            <li><img src="imagem/thumb1.png" onclick="mudarProduto('imagem/img1.png');mudarCorDoCirculo('#017143')">
+            </li>
+            <li><img src="imagem/thumb2.png" onclick="mudarProduto('imagem/img2.png');mudarCorDoCirculo('#eb7495')">
+            </li>
+            <li><img src="imagem/thumb3.png" onclick="mudarProduto('imagem/img3.png');mudarCorDoCirculo('#d752b1')">
+            </li>
+        </ul>
+
+        <ul class="social-midia">
+            <li>
+                <ion-icon name="logo-instagram"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="logo-facebook"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </li>
+        </ul>
+    </section>
+
+
+    <script type="text/javascript">
+        function mudarProduto(anything) {
+            document.querySelector('.produto').src = anything;
+        }
+        function mudarCorDoCirculo(color) {
+            const circulo = document.querySelector('.circulo');
+            circulo.style.background = color;
+        }
+    </script>
+
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
